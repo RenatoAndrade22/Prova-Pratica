@@ -35,18 +35,22 @@ class SaleController extends Controller
      * Store a newly created resource in storage.
      *
      * @param Request $request
-     * @return Response
+     * @return array
      */
     public function store(SalesRequest $request)
     {
-        $commission = $request->get('amount') * 0.085; // 10% de comissão
+        $commission = $request->get('amount') * 0.085; // 8.5% de comissão
 
         $sale = new Sale();
         $sale->fill($request->all());
         $sale->commission = $commission;
         $sale->saveOrFail();
 
-        return $sale;
+        return [
+            'amount' => $sale->amount,
+            'commission' => $sale->commission,
+            'seller_id' => $sale->seller_id,
+        ];
     }
 
     /**

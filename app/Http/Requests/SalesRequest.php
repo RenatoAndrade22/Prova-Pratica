@@ -32,8 +32,8 @@ class SalesRequest extends FormRequest
     public function messages()
     {
         return [
-            'required' => 'O campo nome é obrigatório.',
-            'decimal' => 'Valor inválido.',
+            'amount.required' => 'Valor inválido',
+            'seller_id.required' => 'Usuário inválido.',
         ];
     }
 }
