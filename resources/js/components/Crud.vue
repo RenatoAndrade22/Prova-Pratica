@@ -152,9 +152,7 @@ export default {
         },
 
         update(data){
-            console.log('data', this.list_filds)
             axios.put('/api/'+this.endpoint+'/'+this.item_edit.id, data).then((item) =>{
-
                 let items = collect(this.items).filter((item)=>{
                     return item.id != this.item_edit.id
                 })
@@ -227,8 +225,7 @@ export default {
         },
 
         closeModal(){
-            this.item_edit = null
-            this.item_view = null
+            this.resetForm()
             this.$bvModal.hide('modal-crud')
         },
         openModal(){
