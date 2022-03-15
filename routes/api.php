@@ -17,4 +17,3 @@ Route::resources([
 ]);
 
 Route::get('sales-daile-report', [SaleReportController::class, 'dailyReport']);
-

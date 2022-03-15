@@ -5,7 +5,7 @@
         </div>
         <div class="block">
             <h3>Nova venda</h3>
-            <span>Comissão do vendedor: 10%.</span>
+            <span>Comissão do vendedor: 8.5%.</span>
             <b-form @submit.stop.prevent="onSubmit">
                 <b-form-group>
                     <span class="error" v-if="error">Informe o valor da venda.</span>

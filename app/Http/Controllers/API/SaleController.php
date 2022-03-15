@@ -39,7 +39,7 @@ class SaleController extends Controller
      */
     public function store(SalesRequest $request)
     {
-        $commission = $request->get('amount') * 0.1; // 10% de comissão
+        $commission = $request->get('amount') * 0.085; // 10% de comissão
 
         $sale = new Sale();
         $sale->fill($request->all());
